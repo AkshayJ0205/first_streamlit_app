@@ -29,7 +29,7 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon"
 streamlit.text(fruityvice_response.json())
 
 
-# write your own comment -what does the next line do? 
+#Read the data 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# Displays table
+# Display the table on the page.
 streamlit.dataframe(fruityvice_normalized)
